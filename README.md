@@ -198,6 +198,10 @@ Com a interface e a estrutura já validadas, os próximos passos do projeto são
 4. Faça push para a branch (`git push origin feature/nova-funcionalidade`).
 5. Abra um Pull Request.
 
+## 📄 Licença
+
+Este projeto está licenciado sob a licença MIT — veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
 ---
 
 <p align="center">Desenvolvido para transformar a gestão de lojas de conveniência.</p>
