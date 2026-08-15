@@ -6,7 +6,7 @@ Sistema de **Frente de Caixa (PDV)** e **Retaguarda** desktop, desenvolvido para
 ![React](https://img.shields.io/badge/React-TypeScript-61DAFB?logo=react&logoColor=white)
 ![Tauri](https://img.shields.io/badge/Tauri-v2-24C8DB?logo=tauri&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-blue)
-![License](https://img.shields.io/badge/license-Privado-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-yellow)
 
 ---
 
@@ -15,9 +15,11 @@ Sistema de **Frente de Caixa (PDV)** e **Retaguarda** desktop, desenvolvido para
 - [Visão Geral](#-visão-geral)
 - [Pilares Tecnológicos](#-pilares-tecnológicos)
 - [Funcionalidades](#-funcionalidades)
+- [Capturas de Tela](#-capturas-de-tela)
 - [Arquitetura do Projeto](#-arquitetura-do-projeto)
 - [Requisitos](#-requisitos)
 - [Instalação e Desenvolvimento](#-instalação-e-desenvolvimento)
+- [Variáveis de Ambiente](#-variáveis-de-ambiente)
 - [Build de Produção](#-build-de-produção)
   - [Windows](#windows)
   - [macOS (Universal)](#macos-universal)
@@ -25,6 +27,7 @@ Sistema de **Frente de Caixa (PDV)** e **Retaguarda** desktop, desenvolvido para
 - [Roadmap](#-roadmap)
 - [Contribuindo](#-contribuindo)
 - [Licença](#-licença)
+- [Autor](#-autor)
 
 ---
 
@@ -73,6 +76,23 @@ Central analítica com quatro visões principais:
 
 ### ⚙️ Configurações
 - Painel de customização com troca dinâmica de tema (**Modo Escuro / Madrugada** vs. **Modo Claro**).
+
+## 🖼️ Capturas de Tela
+
+<p align="center">
+  <img src="public/screenshots/dashboard.png" width="800" alt="Dashboard"/>
+  <br/><em>Dashboard</em>
+</p>
+
+<p align="center">
+  <img src="public/screenshots/pdv-frente-caixa.png" width="800" alt="Frente de Caixa (PDV)"/>
+  <br/><em>Frente de Caixa (PDV)</em>
+</p>
+
+<p align="center">
+  <img src="public/screenshots/relatorios.png" width="800" alt="Relatórios"/>
+  <br/><em>Central de Relatórios</em>
+</p>
 
 ## 🗂️ Arquitetura do Projeto
 
@@ -136,6 +156,19 @@ Para rodar em modo de desenvolvimento (hot-reload, com a janela nativa do Tauri)
 ```bash
 yarn tauri dev
 ```
+
+> ℹ️ **Nota:** o projeto está na fase de MVP e atualmente consome dados mockados (`src/mocks/`). A camada de persistência real (Supabase + SQLite local) ainda está em desenvolvimento — veja o [Roadmap](#-roadmap).
+
+## 🔑 Variáveis de Ambiente
+
+Ao integrar o Supabase, crie um arquivo `.env` na raiz do projeto com as seguintes chaves:
+
+```env
+VITE_SUPABASE_URL=sua_url_do_projeto_supabase
+VITE_SUPABASE_ANON_KEY=sua_chave_anon_publica
+```
+
+> ⚠️ Nunca commite o arquivo `.env` — adicione-o ao `.gitignore` e disponibilize um `.env.example` sem valores sensíveis para orientar outros desenvolvedores.
 
 ## 📦 Build de Produção
 
@@ -201,6 +234,10 @@ Com a interface e a estrutura já validadas, os próximos passos do projeto são
 ## 📄 Licença
 
 Este projeto está licenciado sob a licença MIT — veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
+## 👤 Autor
+
+Desenvolvido por [**Tiago Abudi**](https://github.com/TiagoAbudi).
 
 ---
 
