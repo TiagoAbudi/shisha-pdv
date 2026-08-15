@@ -24,4 +24,4 @@ export interface Cores {
   sombra: string;
 }
 
-export type Telas = 'login' | 'dashboard' | 'caixa' | 'produtos' | 'notas' | 'clientes' | 'configuracoes' | 'relatorios';
+export type Telas = 'login' | 'dashboard' | 'caixa' | 'configuracoes' | 'produtos' | 'notas' | 'clientes' | 'relatorios' | 'contas' | 'usuarios' | 'sincronizacao';
